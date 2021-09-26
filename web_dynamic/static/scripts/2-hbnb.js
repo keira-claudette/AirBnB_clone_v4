@@ -1,16 +1,3 @@
-// $.ajax({
-//     url: 'http://192.168.8.103:5001/api/v1/status',
-//     type: 'GET',
-//     datatype: 'json',
-// })
-// .done(function( json ) {
-//     if (json.status === 'OK') {
-//         $('#api_status').addClass('available');
-//     } else {
-//         $('#api_status').removeClass('available'); 
-//     }
-// })
-
 $( document ).ready(function() {
     let amenity_id = [];
     let amenity_name = [];
