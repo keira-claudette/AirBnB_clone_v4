@@ -29,8 +29,7 @@ $.ajax({
     url: "http://192.168.8.103:5001/api/v1/places_search/",
     data: "{}",
     contenttype: "application/json",
-})
-.done(function( json ) {
+    success: function( json ) {
     for (let i = 0; i < json.length; i++) {
         $('<article></article>').appendTo('section.place');
         $('<div></div>').appendTo('section.place article').addClass('title_box');
@@ -41,7 +40,7 @@ $.ajax({
         $('<div></div>').appendTo('div.max_guest').addClass('number_rooms');
         $('<div></div>').appendTo('div.max_guest').addClass('number_bathrooms');
         $('<div></div>').appendTo('section.place article').addClass('description');
-
+})
         // add the content
         $('div.title_box h2').text(json.name);
         $('div.title_box div.price_by_night').text(json.price_by_night);
