@@ -9,7 +9,7 @@ $( document ).ready(function() {
             amenity_id.splice(amenity_id.indexOf($(this).attr('data-id')),1);
             amenity_name.splice(amenity_name.indexOf($(this).attr('data-name')),1);
         }
-        if (amenity_id.length > 0) {
+        if (amenity_id.length >= 0) {
             $("DIV.amenities H4").text(amenity_name.join(', '));
         }
     });
